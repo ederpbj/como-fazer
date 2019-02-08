@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 
 const resolver = (requeste, response) => {
-
+    response.send('Olá Fullstack Lab')
 }
 
 app.get('/', resolver)
