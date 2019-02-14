@@ -92,3 +92,18 @@ node index.js
 
 //Ajuda a manipular html
 npm install ejs
+
+//criar banco de dados firebase
+https://como-fazer-fullstak.firebaseio.com/
+https://como-fazer-fullstak.firebaseio.com/teste.json
+
+//instalar axios
+npm install axios
+
+yarn add axios
+yarn add express
+yarn add ejs
+
+//instalar
+npm install body-parser
+
