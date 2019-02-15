@@ -1,5 +1,5 @@
 //Caminho
-\dev\projetos\react-devPleno\
+//D:\dev\projetos\react-devPleno\como-fazer
 
 //Atalho para formatar
 shift+alt+F
@@ -67,7 +67,7 @@ git push -u origin master
 //******>
 git add .
 
-git commit -m "digite sua mensagem de commit aqui"
+git commit -m "menssagem"
 
 git push origin master
 //<*****
@@ -107,3 +107,25 @@ yarn add ejs
 //instalar
 npm install body-parser
 
+/* standby
+<%= JSON.stringify(categorias)%>
+<% categorias.forEach(categoria => { %>
+<%= categoria.categoria %> <a href="/categorias/excluir/<%= categoria.id %>">Excluir</a> <br />
+<% }) %>
+<!--Exibe como string -->
+<!--JSON.stringify(categorias) -->
+<% Object.keys(categorias).forEach(function (key){ %>
+    <% console.log(categorias[key]); %>
+<% }); %>
+
+<% Object.keys(categorias).forEach(categoria => { %>
+    <%= categoria.categoria %> <a href="/categorias/excluir/<%= categoria.id %>">Excluir</a> <br />
+<% }); %> 
+
+//Quase deu certo
+<% Object.keys(categorias).forEach(function (key){ %>
+    <% categorias[key].categoria  %> <a href="/categorias/excluir/<%= categorias[key].categoria.key %>">Excluir</a> <br />
+    <% console.log(categorias[key].categoria)%>
+     <h1>(categorias[key].categoria) </h1>
+<% }); %>
+*/
