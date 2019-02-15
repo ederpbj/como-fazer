@@ -1,8 +1,10 @@
 const express = require('express')
 const app = express()
 
-const axios = require('axios')
+//const axios = require('axios')
 const bodyParser = require('body-parser')
+
+const api = require('./api')
 
 app.set('view engine', 'ejs')
 app.use(bodyParser.urlencoded())
@@ -22,8 +24,8 @@ app.get('/', async(requeste, response) => {
         categoria: 'Receita'
     })
     */
-    console.log(content.data)
-    response.render('index', { i: content.data })
+   console.log(content.data)
+   response.render('index', { i: content.data })
     
 })
 
@@ -42,58 +44,43 @@ app.listen(port, (err)=>{
     }
 })
 
+app.get('/categorias', async(req, res) => {
+    const categorias = await api.list('categorias')
+    res.render('categorias/index', {categorias})
+   
+})
 
 app.get('/categorias/nova', (requeste, response) => {
     response.render('categorias/nova')
 })
 
 app.post('/categorias/nova', async(req, res) => {
-    console.log(req.body.categoria)
-
-        await axios.post('https://como-fazer-fullstak.firebaseio.com/categorias.json', {
-        categoria: req.body.categoria
-    })
+        await api.create('categorias',{
+            categoria: req.body.categoria
+        })
     //manda uma msg
     //res.send(req.body)
     res.redirect('/categorias')
 })
 
-app.get('/categorias', async(req, res) => {
-    const content = await axios.get('https://como-fazer-fullstak.firebaseio.com/categorias.json')
-    if(content.data){
-        const categorias = Object.keys(content.data).map(key => {
-                                    return {
-                                        id: key,
-                                        ...content.data[key]
-                                    }
-                                })
-        res.render('categorias/index', {categorias: categorias})
-
-    }else{
-        res.render('categorias/index', {categorias: []})
-    }
-})
-
 app.get('/categorias/excluir/:id', async(req, res) => {
-    await axios.delete(`https://como-fazer-fullstak.firebaseio.com/categorias/${req.params.id}.json`)
+    await api.apagar('categorias', req.params.id)
     //res.send('excluido')
     res.redirect('/categorias')
 })
 
 app.get('/categorias/editar/:id', async (req, res) => {
-    const content = await axios.get(`https://como-fazer-fullstak.firebaseio.com/categorias/${req.params.id}.json`)
+    const categoria = await api.get('categorias', req.params.id)
+    //console.log(categoria)
     res.render('categorias/editar', {
-        categoria: {
-            id: req.params.id,
-            ...content.data
-        }
+        categoria
     })
 })
 
 app.post('/categorias/editar/:id', async(req, res) => {
     //console.log(req.body.categoria)
-    await axios.put(`https://como-fazer-fullstak.firebaseio.com/categorias/${req.params.id}.json`, {
-    categoria: req.body.categoria
+    await api.update('categorias', req.params.id, {
+        categoria: req.body.categoria
     })
     //manda uma msg
     //res.send(req.body)
