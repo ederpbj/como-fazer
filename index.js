@@ -13,8 +13,9 @@ const port = process.env.PORT || 3000
 
 
 app.get('/', async(requeste, response) => {
-   const content = await axios.get('https://como-fazer-fullstak.firebaseio.com/teste.json')
-   response.render('index', { i: content.data })
+   //const content = await axios.get('https://como-fazer-fullstak.firebaseio.com/teste.json')
+   //response.render('index', { i: content.data })
+   response.render('index')
     
 })
 
