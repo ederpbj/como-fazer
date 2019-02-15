@@ -17,7 +17,7 @@ app.get('/', async(requeste, response) => {
     
 })
 
-app.use(categorias)
+app.use('/categorias',categorias)
 
 app.listen(port, (err)=>{
     if(err){
