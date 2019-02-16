@@ -1,0 +1,7 @@
+#ignorar arquivo
+#.nomeArquivo
+
+#ignorar pasta pasta 
+pasta nova/
+
+node_modules/

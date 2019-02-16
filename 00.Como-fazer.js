@@ -171,4 +171,40 @@ npm install body-parser
 }
 
 
+//caminho
+//settings/usuarios e permissões/contas de serviço/chaves secretas do banco
+//copia o secrets
+?auth=FFoQxgc5n7dqnhJ3tJFHFN7RvzyNn93hnAiCgxkA
 
+//instalar o firebase admin
+npm install firebase-admin --save
+
+//usar na api
+var admin = require('firebase-admin');
+
+//não deu certo instalar firebase
+//tenar
+npm install --save-exact firebase-functions@0.7.0 npm install --save-exact firebase-admin@5.4.0
+
+firebase deploy --only functions
+
+yarn add firebase-functions@0.7.0 --exact yarn add firebase-admin@5.4.0 --exact
+
+//erro
+npm i --save balanced-match
+
+//peguei no site firebase
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB4w1dbgrmfv5p-EgUiWhXhwcJsrCvM_4o",
+    authDomain: "como-fazer-fullstak.firebaseapp.com",
+    databaseURL: "https://como-fazer-fullstak.firebaseio.com",
+    projectId: "como-fazer-fullstak",
+    storageBucket: "como-fazer-fullstak.appspot.com",
+    messagingSenderId: "445486535456"
+  };
+  firebase.initializeApp(config);
+</script>

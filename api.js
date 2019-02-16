@@ -1,8 +1,9 @@
 const axios = require('axios')
 const baseURL = 'https://como-fazer-fullstak.firebaseio.com/'
+const auth='FFoQxgc5n7dqnhJ3tJFHFN7RvzyNn93hnAiCgxkA'
 
 const list = async(key) => {
-    const content = await axios.get(baseURL+key+'.json')
+    const content = await axios.get(baseURL+key+'.json?auth='+auth)
 
     if(content.data){
         const objetos = Object
@@ -21,12 +22,12 @@ const list = async(key) => {
 }
 
 const apagar = async(key, id) => {
-    await axios.delete(baseURL + key + '/' + id + '.json')
+    await axios.delete(baseURL + key + '/' + id + '.json?auth='+auth)
     return true
 }
 
 const get = async(key, id) => {
-    const content = await axios.get(`${baseURL}/${key}/${id}.json`)
+    const content = await axios.get(`${baseURL}/${key}/${id}.json?auth=`+auth)
         return {
             id: id,
             ...content.data
@@ -34,12 +35,12 @@ const get = async(key, id) => {
 }
 
 const update = async(key, id, data) => {
-    await axios.put(`${baseURL}/${key}/${id}.json`, data)
+    await axios.put(`${baseURL}/${key}/${id}.json?auth=`+auth, data)
     return true
 }
 
 const create = async(key, data) => {
-        await axios.post(baseURL+'/'+key+'.json', data)
+        await axios.post(baseURL+'/'+key+'.json?auth='+auth, data)
     return true
 }
 
