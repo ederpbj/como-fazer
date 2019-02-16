@@ -2,6 +2,7 @@ const axios = require('axios')
 const baseURL = 'https://como-fazer-fullstak.firebaseio.com/'
 const auth='FFoQxgc5n7dqnhJ3tJFHFN7RvzyNn93hnAiCgxkA'
 
+
 const list = async(key) => {
     const content = await axios.get(baseURL+key+'.json?auth='+auth)
 
