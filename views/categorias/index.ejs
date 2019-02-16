@@ -12,7 +12,11 @@
     <tbody>
     <% categorias.forEach(categoria => { %>
       <tr>
-        <td ><%= categoria.categoria %> </td>
+        <td >
+          <a href="/publicacoes/categoria/<%= categoria.id %>">
+            <%= categoria.categoria %> 
+          </a>
+        </td>
         <td>
                 <a href="/categorias/editar/<%= categoria.id %>" >Editar</a> 
                 <a href="/categorias/excluir/<%= categoria.id %>" >Excluir</a>
