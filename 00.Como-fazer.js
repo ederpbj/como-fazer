@@ -160,3 +160,15 @@ npm install body-parser
 
  //instalar node moon 
  //automatiza a reinicialização do servidor
+
+ //Preparando banco de dados para subir aplicação
+
+ {
+  "rules": {
+    ".read": false,
+    ".write": false
+  }
+}
+
+
+
