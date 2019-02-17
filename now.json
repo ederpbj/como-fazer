@@ -1,5 +1,5 @@
 {
-  "name": "como-fazer-agora",
+  "name": "como-fazer",
   "version": 2,
   "builds": [
     { "src": "apollo/index.js", "use": "@now/node-server" },
