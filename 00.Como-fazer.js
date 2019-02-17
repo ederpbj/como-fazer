@@ -234,5 +234,5 @@ now
   ]
 }
 
-//now do git
+//now do git.
 https://github.com/zeit/now-examples
