@@ -70,6 +70,9 @@ git add .
 git commit -m "menssagem"
 
 git push origin master
+
+//Forçando push
+git push -f origin master
 //<*****
 
 //criar o gitignore
