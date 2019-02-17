@@ -1,5 +1,5 @@
 {
-  "name": "fullstak-lab-como-fazer",
+  "name": "fullstak-como-fazer",
   "version": 2,
   "builds": [
     { "src": "apollo/index.js", "use": "@now/node-server" },

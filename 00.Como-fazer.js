@@ -236,3 +236,6 @@ now
 
 //now do git.
 https://github.com/zeit/now-examples
+
+//remover arquivos do git
+git rm -r node_modules
