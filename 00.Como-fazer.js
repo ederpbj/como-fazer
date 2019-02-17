@@ -233,3 +233,6 @@ now
     {"src": ".*", "dest": "/index.js"}
   ]
 }
+
+//now do git
+https://github.com/zeit/now-examples
