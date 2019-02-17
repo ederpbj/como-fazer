@@ -1,0 +1,31 @@
+{
+  "categorias" : {
+    "-LYo-Jd0kacnAtIQ1DhX" : {
+      "categoria" : "Carnaval em joão pessoa"
+    },
+    "-LYoCNV2BGiFyNkWCC38" : {
+      "categoria" : "São João"
+    }
+  },
+  "publicacoes" : {
+    "-LYo-Jd0kacnAtIQ1DhX" : {
+      "-LYo-R0zclKxaPbkbeeW" : {
+        "conteudo" : "O grande encontro",
+        "titulo" : "Alceu Valença"
+      },
+      "-LYo1eRv0cZo8yVI5yxy" : {
+        "conteudo" : "flor de liz",
+        "titulo" : "Elba Ramalho"
+      },
+      "-LYoHEi_LmXkcX_QVZ_T" : {
+        "conteudo" : "df",
+        "titulo" : "Ivete sangalo"
+      },
+      "-LYvzPGl0KGoV36c42Yt" : {
+        "conteudo" : "praça das muriçocas",
+        "titulo" : "Cafuçu da lagoa"
+      }
+    }
+  },
+  "teste" : "Olá firebase mudei"
+}
