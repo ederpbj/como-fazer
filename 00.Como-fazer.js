@@ -208,3 +208,13 @@ npm i --save balanced-match
   };
   firebase.initializeApp(config);
 </script>
+
+//configurando o now zeid
+nom install now
+
+//nomde do projeto
+now --name como-fazer
+
+//ir para diretório
+//push do now
+now
