@@ -1,6 +1,6 @@
 {
-  "name": "fullstak-como-fazer",
-  "version": 1,
+  "name": "como-fazer",
+  "version": 2,
   "builds": [
     { "src": "apollo/index.js", "use": "@now/node-server" },
     { "src": "go/*.go", "use": "@now/go" },
