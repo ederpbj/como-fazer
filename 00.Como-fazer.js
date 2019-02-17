@@ -218,3 +218,18 @@ now --name como-fazer
 //ir para diretório
 //push do now
 now
+
+//arquivo now atualizado
+{
+  "name": "fullstak-como-fazer",
+  "version": 2,
+  "builds": [
+    {"src": "package.json", "use": "@now/static-build"}
+  ],
+  "routes": [
+    {"src": "^/js/(.*)", "dest": "/js/$1"},
+    //{"src": "^/css/(.*)", "dest": "/css/$1"},
+    //{"src": "^/img/(.*)", "dest": "/img/$1"},
+    {"src": ".*", "dest": "/index.js"}
+  ]
+}
