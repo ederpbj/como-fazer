@@ -1,5 +1,5 @@
 Arguments: 
-  C:\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add firebase-admin --save
+  C:\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add now
 
 PATH: 
   C:\Users\ederp\Downloads\DEV\cmder\bin;C:\Users\ederp\Downloads\DEV\cmder\vendor\bin;C:\Users\ederp\Downloads\DEV\cmder\vendor\conemu-maximus5\ConEmu\Scripts;C:\Users\ederp\Downloads\DEV\cmder\vendor\conemu-maximus5;C:\Users\ederp\Downloads\DEV\cmder\vendor\conemu-maximus5\ConEmu;C:\Python27\;C:\Python27\Scripts;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\starcode\apache-maven-3.5.0\\bin;C:\Program Files\Java\jdk1.8.0_191;C:\Program Files\Java\jdk1.8.0_191\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\System32\OpenSSH\;"C:\Program Files;C:\Winnt;C:\Winnt\System32";C:\Program Files (x86)\MySQL\MySQL Installer for Windows;C:\HashiCorp\Vagrant\bin;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin\;C:\ProgramData\chocolatey\bin;C:\nodejs\;C:\Program Files\Java\jdk1.8.0_191\bin;C:\Ruby25-x64\bin;C:\RailsInstaller\Git\cmd;C:\RailsInstaller\Ruby2.2.0\bin;C:\Users\ederp\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Heroku\bin;C:\Program Files (x86)\MySQL\MySQL Installer for Windows;C:\Users\ederp\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\ederp\AppData\Local\Yarn\bin;C:\Users\ederp\AppData\Roaming\npm;C:\Users\ederp\AppData\Local\Android\sdk\platform-tools;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\ederp\Downloads\DEV\cmder
@@ -14,7 +14,12 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, scandir 'D:\dev\projetos\react-devPleno\como-fazer\node_modules\@types'
+  SyntaxError: D:\dev\projetos\react-devPleno\como-fazer\package.json: Unexpected token } in JSON at position 143
+      at JSON.parse (<anonymous>)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:1631:59
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:304:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:315:13
 
 npm manifest: 
   {
@@ -23,7 +28,8 @@ npm manifest:
     "description": "",
     "main": "index.js",
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
+      "start": "node index.js",
+      
     },
     "author": "Eder Pires",
     "license": "MIT",

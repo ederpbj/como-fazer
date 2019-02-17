@@ -1,6 +1,6 @@
 #ignorar arquivo
 #.nomeArquivo
-
+.yarn-error.log
 #ignorar pasta pasta 
 pasta nova/
 
